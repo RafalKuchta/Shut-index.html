@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        background-image: radial-gradient(black 4%, red 4%, red 10%, rgb(79, 255, 35) 10%, rgb(79, 255, 35) 18%, white 18%);
+        overflow: hidden;
+    }
+
+    button {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        padding: 5px 10px;
+        font-family: arial;
+        font-size: 40px;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4vh;
+        width: 4vh;
+        background-color: #777;
+        animation: move 8s infinite linear alternate;
+    }
+
+    button:hover+div {
+        animation-play-state: paused;
+    }
+
+    @keyframes move {
+        0% {
+            top: 10%;
+            left: 10%;
+        }
+
+        10% {
+            top: 20%;
+            left: 80%;
+        }
+
+        15% {
+            top: 50%;
+            left: 50%;
+        }
+
+        25% {
+            top: 50%;
+            left: 100%;
+        }
+
+        30% {
+            top: 70%;
+            left: 20%;
+        }
+
+        40% {
+            top: 80%;
+            left: 100%;
+        }
+
+        55% {
+            top: 40%;
+            left: 80%;
+        }
+
+        66% {
+            top: 30%;
+            left: 10%;
+        }
+
+        70% {
+            top: 40%;
+            left: 60%;
+        }
+
+        78% {
+            top: 50%;
+            left: 10%;
+        }
+
+        90% {
+            top: 80%;
+            left: 10%;
+        }
+
+        100% {
+            top: 40%;
+            left: 80%;
+        }
+    }
+</style>
+
+<body>
+
+    <button>SHOT!</button>
+    <div></div>
+
+</body>
+
+</html>
